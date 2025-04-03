@@ -5,8 +5,8 @@ import InputField from "@/app/components/InputField";
 import { jsPDF } from "jspdf";
 
 const supabase = createClient(
-  "https://lgsgvgahwuytqcyeehbm.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxnc2d2Z2Fod3V5dHFjeWVlaGJtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM1ODQ4NTIsImV4cCI6MjA1OTE2MDg1Mn0.1seb4O5pkQKtqjDyUdoHp-zpi3wf5gHRC4D2H5xl8mQ"
+  "https://xgzhwuvgzbgswslhigzz.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhnemh3dXZnemJnc3dzbGhpZ3p6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM1ODUxMjksImV4cCI6MjA1OTE2MTEyOX0.CFb3ltz8JFE3w-K6kvtxBwcZuRhU0exn4aNEvBwqoeE"
 );
 
 export default function CreateStudent() {
@@ -27,7 +27,7 @@ export default function CreateStudent() {
 
     try {
       const { data, error } = await supabase
-        .from("student")
+        .from("Student")
         .insert([{ name, usn, phone, email, address, gender, age }])
         .select();
 
